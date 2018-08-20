@@ -1,0 +1,9 @@
+#graph-area {
+  display: block;
+  margin: auto;
+  border-style: solid;
+}
+
+#about {
+  max-width: 500px;
+}

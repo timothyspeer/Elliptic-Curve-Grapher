@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Elliptic Curve Grapher</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+  </head>
+  <body onresize="resize_window();">
+    <div id="graph-box">
+      <canvas id="graph-area"></canvas>
+    </div>
+    <form onsubmit="draw_graph(); return false;">
+      <label id="a-label" for="a">a = </label>
+      <input id="a" type="number" value="-1" step="0.01" min="-100" max="100" required><br>
+      <label id="b-label" for="b">b = </label>
+      <input id="b" type="number" value="0" step="0.01" min="-100" max="100" required><br>
+      <label id="x-range-label" for="x-range">x range = </label>
+      <input id="x-range" type="number" value="10" step="0.01" min="1" max="100" required><br>
+      <input id="graph" type="submit" value="Graph">
+    </form>
+    <p id="about">Enter values for a and b and click graph to
+      draw the elliptic curve given by the equation
+      y<sup>2</sup> = x<sup>3</sup> + ax + b.
+    </p>
+  </body>
+</html>
