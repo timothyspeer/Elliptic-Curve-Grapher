@@ -8,19 +8,45 @@
   <body onresize="resize_window();">
     <div id="graph-box">
       <canvas id="graph-area"></canvas>
+      <p id="curve-equation"></p>
     </div>
-    <form onsubmit="draw_graph(); return false;">
-      <label id="a-label" for="a">a = </label>
-      <input id="a" type="number" value="-1" step="0.01" min="-100" max="100" required><br>
-      <label id="b-label" for="b">b = </label>
-      <input id="b" type="number" value="0" step="0.01" min="-100" max="100" required><br>
-      <label id="x-range-label" for="x-range">x range = </label>
-      <input id="x-range" type="number" value="10" step="0.01" min="1" max="100" required><br>
-      <input id="graph" type="submit" value="Graph">
-    </form>
-    <p id="about">Enter values for a and b and click graph to
-      draw the elliptic curve given by the equation
-      y<sup>2</sup> = x<sup>3</sup> + ax + b.
-    </p>
+    <hr>
+    <div id="about-box">
+      <h2>About</h2>
+      <p id="about">Enter values for <span class="var">a</span> and <span class="var">b</span>
+        to graph the elliptic curve given by the equation
+        <span id="equation">y<sup>2</sup> = x<sup>3</sup> + ax + b</span>
+      </p>
+      <p>
+        The curve will be plotted on the interval
+        <span class="var">[-x range, x range]</span>. The variables <span class="var">a</span>
+        and <span class="var">b</span> can take values in the interval
+        <span class="var">[-100, 100]</span> with an accuracy of one decimal
+        point. The variable <span class="var">x range</span> can take values in
+        <span class="var">[1, 500]</span> in increments of 1. If you enter
+        values for <span class="var">a</span> and <span class="var">b</span>
+        which make the curve singular then the graph for the singular curve
+        will still be plotted.
+      </p>
+    </div>
+    <div id="form-box">
+      <form oninput="submit_graph();">
+        <div id="a-group" class="group">
+          <label id="a-label" for="a">a</label>
+          <input id="a" type="number" value="-1" step="0.1" min="-100" max="100" required>
+          <p id="a-valid" class="valid"></p><br>
+        </div>
+        <div id="b-group" class="group">
+          <label id="b-label" for="b">b</label>
+          <input id="b" type="number" value="0" step="0.1" min="-100" max="100" required>
+          <p id="b-valid" class="valid"></p><br>
+        </div>
+        <div id="x-range-group" class="group">
+          <label id="x-range-label" for="x-range">x range</label>
+          <input id="x-range" type="number" value="5" step="1" min="1" max="500"required>
+          <p id="xRange-valid" class="valid"></p>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

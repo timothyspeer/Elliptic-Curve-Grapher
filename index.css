@@ -1,9 +1,72 @@
+label {
+  display: block;
+  font-size: 120%;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
 #graph-area {
   display: block;
-  margin: auto;
+  margin: 30px auto 10px auto;
   border-style: solid;
 }
 
-#about {
-  max-width: 500px;
+#curve-equation {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+#about-box {
+  display: inline-block;
+  width: 33%;
+  vertical-align: top;
+  border-style: solid;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#equation {
+  font-style: italic;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin: 10px auto 10px auto;
+}
+
+#form-box {
+  display: inline-block;
+  vertical-align: top;
+  border-style: solid;
+  margin-top: 10px;
+}
+
+.valid {
+  display: inline;
+  margin-left: 10px;
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+}
+
+.group {
+  margin: 20px;
+}
+
+.var {
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media screen and (max-width: 350px) {
+  #about-box, #form-box {
+    display: block;
+    width: 90%;
+  }
+
+  #a, #b, #x-range {
+    width: 60px;
+  }
 }
