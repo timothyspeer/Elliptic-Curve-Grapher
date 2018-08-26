@@ -40,6 +40,7 @@ label {
   display: inline-block;
   vertical-align: top;
   border-style: solid;
+  width: 57%;
   margin-top: 10px;
 }
 
@@ -60,7 +61,7 @@ label {
   font-style: italic;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 385px) {
   #about-box, #form-box {
     display: block;
     width: 90%;

@@ -3,6 +3,7 @@
   <head>
     <title>Elliptic Curve Grapher</title>
     <link rel="stylesheet" href="index.css">
+    <script src="draw.js" defer></script>
     <script src="index.js" defer></script>
   </head>
   <body onresize="resize_window();">
@@ -21,9 +22,8 @@
         The curve will be plotted on the interval
         <span class="var">[-x range, x range]</span>. The variables <span class="var">a</span>
         and <span class="var">b</span> can take values in the interval
-        <span class="var">[-100, 100]</span> with an accuracy of one decimal
-        point. The variable <span class="var">x range</span> can take values in
-        <span class="var">[1, 500]</span> in increments of 1. If you enter
+        <span class="var">[-100, 100]</span>. The variable <span class="var">x range</span>
+        can take values in the interval <span class="var">[1, 500]</span>. If you enter
         values for <span class="var">a</span> and <span class="var">b</span>
         which make the curve singular then the graph for the singular curve
         will still be plotted.
@@ -33,17 +33,17 @@
       <form oninput="submit_graph();">
         <div id="a-group" class="group">
           <label id="a-label" for="a">a</label>
-          <input id="a" type="number" value="-1" step="0.1" min="-100" max="100" required>
+          <input id="a" type="number" value="-1" step="any" min="-100" max="100" required>
           <p id="a-valid" class="valid"></p><br>
         </div>
         <div id="b-group" class="group">
           <label id="b-label" for="b">b</label>
-          <input id="b" type="number" value="0" step="0.1" min="-100" max="100" required>
+          <input id="b" type="number" value="0" step="any" min="-100" max="100" required>
           <p id="b-valid" class="valid"></p><br>
         </div>
         <div id="x-range-group" class="group">
           <label id="x-range-label" for="x-range">x range</label>
-          <input id="x-range" type="number" value="5" step="1" min="1" max="500"required>
+          <input id="x-range" type="number" value="5" step="any" min="1" max="500" required>
           <p id="xRange-valid" class="valid"></p>
         </div>
       </form>
